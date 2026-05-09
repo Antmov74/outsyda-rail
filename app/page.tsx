@@ -250,7 +250,7 @@ export default function HomePage() {
 
           <div className="flex items-center gap-6">
             <img
-              src="/Outsyda_New_Logo.png"
+              src="/Outsyda_Master_Badge.png"
               alt="Outsyda Badge"
               className="h-14 w-auto"
             />
