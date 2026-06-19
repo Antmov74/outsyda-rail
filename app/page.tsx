@@ -1,311 +1,262 @@
-"use client";
+export default function HomePage() {
+    const journeys = [
+    {
+      title: "Switzerland",
+      href: "/journeys/switzerland",
+      image:
+        "https://images.unsplash.com/photo-1527668752968-14dc70a27c95?auto=format&fit=crop&w=1200&q=80",
+      copy: "Alpine rail icons, mountain villages and panoramic routes.",
+    },
+    {
+      title: "Eastern Oriental Express",
+      href: "/journeys/eastern-oriental-express",
+      image:
+        "https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?auto=format&fit=crop&w=1200&q=80",
+      copy: "Southeast Asian luxury rail with atmosphere and tropical landscapes.",
+    },
+    {
+      title: "Rovos Rail",
+      href: "/journeys/rovos-rail",
+      image: "/journeys/rovos-rail/sign.jpg",
+      copy: "The Pride of Africa: luxury rail journeys through South Africa and beyond.",
+    },
+    {
+      title: "Maharajas' Express",
+      href: "/journeys/maharajas-express",
+      image: "/journeys/maharajas-express/EXTERIOR.JPG",
+      copy: "India's most luxurious train, exploring palaces, wildlife and cultural treasures.",
+    },
+  ];
 
-import React from "react";
-
-const whatsappNumber = "447946442509";
-
-const journeys = [
-  {
-    title: "Rocky Mountaineer",
-    region: "Canada",
-    link: "/journeys/canada",
-    image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80",
-    description: "Glass-domed luxury through the Canadian Rockies.",
-  },
-  {
-    title: "Swiss Alpine Rail",
-    region: "Switzerland",
-    link: "/journeys/switzerland",
-    image:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80",
-    description: "Iconic mountain rail, lakes, peaks and premium hotels.",
-  },
-  {
-    title: "Eastern & Oriental Express",
-    region: "Singapore, Malaysia & Thailand",
-    link: "/journeys/eastern-oriental-express",
-    image:
-      "https://images.unsplash.com/photo-1528702748617-c64d49f918af?auto=format&fit=crop&w=1400&q=80",
-    description: "Old-world rail glamour with tropical adventure.",
-  },
-];
-
-export default function Home() {
   return (
-    <main className="min-h-screen scroll-smooth bg-[#080A0D] text-white">
-      {/* NAVBAR */}
-      <nav className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-black/50 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
-          {/* LOGO */}
-          <a href="#" className="flex items-center gap-4">
-            <div className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-full border border-white/20 bg-white shadow-[0_0_25px_rgba(255,255,255,0.15)]">
-              <img
-                src="/outsyda-badge.png"
-                alt="Outsyda Badge"
-                className="h-12 w-12 object-contain"
-              />
-            </div>
+    <main className="min-h-screen bg-black text-white">
+  <section className="relative min-h-[92vh] overflow-hidden bg-black">
+  <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 gap-1 opacity-95">
+    {journeys.map((journey) => (
+      <img
+        key={journey.title}
+        src={journey.image}
+        alt={journey.title}
+        className="h-full w-full object-cover"
+      />
+    ))}
+  </div>
 
-            <div>
-              <p className="text-sm font-black tracking-[0.35em] text-white">
-                OUTSYDA
-              </p>
+  <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-black/10" />
+  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/20" />
 
-              <p className="text-xs uppercase tracking-[0.3em] text-[#ff8e8e]">
-                Rail
-              </p>
-            </div>
-          </a>
+  <div className="relative z-10 mx-auto flex min-h-[92vh] max-w-7xl flex-col justify-center px-6">
+    <div className="mb-8 flex items-center gap-4">
+      <img
+        src="/outsyda-badge.png"
+        alt="Outsyda Rail"
+        className="h-20 w-20 rounded-full bg-white p-1"
+      />
 
-          {/* NAV LINKS */}
-          <div className="hidden items-center gap-8 text-sm text-white/75 md:flex">
-            <a href="#journeys" className="hover:text-[#ff8e8e]">
-              Journeys
-            </a>
+      <div>
+        <p className="text-2xl font-semibold tracking-[0.35em]">
+          OUTSYDA
+        </p>
+        <p className="text-sm uppercase tracking-[0.45em] text-[#ff6b5f]">
+          Rail
+        </p>
+      </div>
+    </div>
 
-            <a href="#why" className="hover:text-[#ff8e8e]">
-              Why Outsyda
-            </a>
+    <p className="mb-5 text-sm uppercase tracking-[0.45em] text-[#ff6b5f]">
+      Extraordinary Rail Journeys
+    </p>
 
-            <a href="#inquiry" className="hover:text-[#ff8e8e]">
-              Enquire
-            </a>
-          </div>
+    <h1 className="max-w-5xl text-5xl font-light leading-tight md:text-7xl">
+      Luxury rail adventures across the world.
+    </h1>
 
-          {/* CTA */}
-          <a
-            href="#inquiry"
-            className="rounded-full bg-[#ff6b6b] px-5 py-2 text-sm font-bold text-black transition hover:bg-[#ff8e8e]"
-          >
-            Plan My Rail Adventure
-          </a>
-        </div>
-      </nav>
+    <p className="mt-8 max-w-3xl border-l-2 border-[#ff6b5f] pl-6 text-lg leading-8 text-white/80">
+      From the Rocky Mountaineer and Glacier Express to the Eastern &
+      Oriental Express and Rovos Rail, discover unforgettable journeys
+      curated by Outsyda Rail.
+    </p>
 
-      {/* HERO */}
-      <section className="relative flex min-h-screen items-center overflow-hidden px-5 pt-28">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-40"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=2000&q=80')",
-          }}
-        />
+    <div className="mt-10 flex flex-wrap gap-4">
+      <a
+        href="#journeys"
+        className="rounded-full bg-[#ff6b5f] px-8 py-4 font-semibold text-black transition hover:bg-white"
+      >
+        Explore Journeys
+      </a>
 
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/20" />
+      <a
+        href="#enquire"
+        className="rounded-full border border-[#ff6b5f]/70 px-8 py-4 font-semibold text-white transition hover:bg-[#ff6b5f] hover:text-black"
+      >
+        Start Planning
+      </a>
+    </div>
+  </div>
+</section>   
 
-        <div className="relative mx-auto max-w-7xl">
-          <div className="max-w-3xl">
-            <p className="mb-5 inline-flex rounded-full border border-[#ff8e8e]/40 bg-[#ff8e8e]/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.25em] text-[#ffb3b3]">
-              Luxury rail journeys for adventurous travellers
-            </p>
-
-            <h1 className="text-5xl font-black leading-tight md:text-7xl">
-              Epic train journeys, designed the Outsyda way.
-            </h1>
-
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-white/75">
-              Premium rail adventures across the world’s most dramatic
-              landscapes — crafted with expert planning, trusted protection and
-              proper adventure-travel soul.
-            </p>
-
-            <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-              <a
-                href="#inquiry"
-                className="rounded-full bg-[#ff6b6b] px-8 py-4 text-center font-bold text-black transition hover:-translate-y-1 hover:bg-[#ff8e8e]"
-              >
-                Plan My Rail Adventure
-              </a>
-
-              <a
-                href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-                  "Hi Outsyda, I’m interested in an epic rail adventure."
-                )}`}
-                target="_blank"
-                className="rounded-full border border-white/25 px-8 py-4 text-center font-bold text-white transition hover:-translate-y-1 hover:border-[#ff8e8e] hover:text-[#ff8e8e]"
-              >
-                WhatsApp Outsyda
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* JOURNEYS */}
-      <section id="journeys" className="scroll-mt-28 px-5 py-24">
+      <section id="journeys" className="bg-white/[0.03] px-6 py-24">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end">
-            <div>
-              <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#ff8e8e]">
-                Featured journeys
-              </p>
+          <p className="mb-4 text-sm uppercase tracking-[0.35em] text-[#ff6b5f]">
+            Featured Journeys
+          </p>
 
-              <h2 className="mt-3 text-4xl font-black md:text-5xl">
-                Rail adventures worth building a trip around.
-              </h2>
-            </div>
+          <h2 className="max-w-3xl text-4xl font-light md:text-5xl">
+            Start with the world’s great rail experiences.
+          </h2>
 
-            <p className="max-w-xl text-white/65">
-              Each journey can be shaped around luxury hotels, wildlife,
-              expedition-style add-ons, city stays and private touring.
-            </p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {journeys.map((journey) => (
-              <article
+              <a
                 key={journey.title}
-                className="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04]"
+                href={journey.href}
+                className="group overflow-hidden rounded-[2rem] border border-white/10 bg-black transition hover:border-[#ff6b5f]/60"
               >
-                <div
-                  className="h-72 bg-cover bg-center transition duration-700 group-hover:scale-105"
-                  style={{
-                    backgroundImage: `url('${journey.image}')`,
-                  }}
+                <img
+                  src={journey.image}
+                  alt={journey.title}
+                  className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
                 />
 
                 <div className="p-6">
-                  <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#ff8e8e]">
-                    {journey.region}
+                  <h3 className="text-2xl font-light">{journey.title}</h3>
+                  <p className="mt-4 leading-7 text-white/65">
+                    {journey.copy}
                   </p>
-
-                  <h3 className="mt-2 text-2xl font-black">
-                    {journey.title}
-                  </h3>
-
-                  <p className="mt-3 text-white/65">
-                    {journey.description}
-                  </p>
-
-                  <a
-                    href={journey.link}
-                    className="mt-6 inline-block font-bold text-[#ff8e8e] hover:text-[#ffb3b3]"
-                  >
-                    Explore this journey →
-                  </a>
                 </div>
-              </article>
+              </a>
             ))}
           </div>
         </div>
       </section>
 
-      {/* WHY OUTSYDA */}
-      <section
-        id="why"
-        className="scroll-mt-28 bg-white/[0.03] px-5 py-24"
-      >
-        <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-3">
-          {[
-            "Adventure-first planning",
-            "Luxury without the bland bits",
-            "Protected, personal service",
-          ].map((item, index) => (
-            <div
-              key={item}
-              className="rounded-3xl border border-white/10 bg-black/30 p-8"
-            >
-              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-[#ff6b6b] font-black text-black">
-                {index + 1}
-              </div>
-
-              <h3 className="text-2xl font-black">{item}</h3>
-
-              <p className="mt-4 leading-7 text-white/65">
-                Built for travellers who want something more memorable than a
-                standard package holiday.
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ENQUIRY */}
-      <section id="inquiry" className="scroll-mt-32 px-5 py-24">
-        <div className="mx-auto grid max-w-7xl gap-10 rounded-[2rem] border border-[#ff8e8e]/20 bg-gradient-to-br from-[#ff8e8e]/10 to-white/[0.03] p-6 md:grid-cols-2 md:p-12">
+      <section id="why-outsydA" className="px-6 py-24">
+        <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-3">
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#ff8e8e]">
-              Start planning
+            <p className="mb-4 text-sm uppercase tracking-[0.35em] text-[#ff6b5f]">
+              Why Outsyda
             </p>
-
-            <h2 className="mt-4 text-4xl font-black md:text-5xl">
-              Tell me what kind of rail adventure you want.
-            </h2>
-
-            <p className="mt-6 leading-8 text-white/70">
-              Give me the rough idea — destination, style, dates, budget and
-              who’s travelling. I’ll help shape it into something properly
-              special.
-            </p>
-
-            <a
-              href={`https://wa.me/${whatsappNumber}`}
-              target="_blank"
-              className="mt-8 inline-flex rounded-full border border-white/20 px-6 py-3 font-bold hover:border-[#ff8e8e] hover:text-[#ff8e8e]"
-            >
-              Prefer WhatsApp? Message me directly
-            </a>
+            <h2 className="text-4xl font-light">Rail journeys, curated properly.</h2>
           </div>
 
-          {/* LIVE FORM */}
-          <form
-            action="https://formspree.io/f/mojryyvv"
-            method="POST"
-            className="space-y-4"
-          >
-            <input
-              name="name"
-              required
-              placeholder="Name"
-              className="w-full rounded-2xl border border-white/10 bg-black/40 px-5 py-4 outline-none focus:border-[#ff8e8e]"
-            />
+          <div className="rounded-[2rem] border border-white/10 p-7">
+            <h3 className="text-2xl font-light">Curated properly</h3>
+            <p className="mt-4 leading-7 text-white/65">
+              We match the route, train, cabin and pace to the traveller — not
+              the other way around.
+            </p>
+          </div>
 
-            <input
-              name="email"
-              type="email"
-              required
-              placeholder="Email"
-              className="w-full rounded-2xl border border-white/10 bg-black/40 px-5 py-4 outline-none focus:border-[#ff8e8e]"
-            />
-
-            <input
-              name="phone"
-              placeholder="Phone / WhatsApp"
-              className="w-full rounded-2xl border border-white/10 bg-black/40 px-5 py-4 outline-none focus:border-[#ff8e8e]"
-            />
-
-            <input
-              name="journey"
-              placeholder="Journey or destination of interest"
-              className="w-full rounded-2xl border border-white/10 bg-black/40 px-5 py-4 outline-none focus:border-[#ff8e8e]"
-            />
-
-            <textarea
-              name="message"
-              required
-              rows={5}
-              placeholder="Tell me what you’re imagining..."
-              className="w-full rounded-2xl border border-white/10 bg-black/40 px-5 py-4 outline-none focus:border-[#ff8e8e]"
-            />
-
-            <button className="w-full rounded-full bg-[#ff6b6b] px-8 py-4 font-black text-black transition hover:bg-[#ff8e8e]">
-              Send Rail Enquiry
-            </button>
-          </form>
+          <div className="rounded-[2rem] border border-white/10 p-7">
+            <h3 className="text-2xl font-light">Financial protection</h3>
+            <p className="mt-4 leading-7 text-white/65">
+              Book with confidence through a financially protected UK travel
+              business.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="border-t border-white/10 px-5 py-10">
-        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-5 text-sm text-white/55 md:flex-row">
-          <p>
-            © {new Date().getFullYear()} Outsyda Rail. Epic rail adventures.
-          </p>
+     <section id="enquire" className="relative overflow-hidden px-6 py-24"> 
+  <img
+     
+    src="/journeys/rovos-rail/lounge.jpg"
+    alt="Luxury rail lounge"
+    className="absolute inset-0 h-full w-full object-cover opacity-25"
+  />
+  
 
-          <p>Outsyda is affiliated with TTA for financial protection.</p>
-        </div>
+  <div className="absolute inset-0 bg-black/75" />
+
+  <div className="relative z-10 mx-auto grid max-w-7xl gap-10 rounded-[2rem] border border-[#ff6b5f]/30 bg-black/70 p-8 backdrop-blur-sm md:grid-cols-[0.9fr_1.1fr] md:p-12">
+    <div>
+      <p className="mb-4 text-sm uppercase tracking-[0.35em] text-[#ff6b5f]">
+        Start Planning
+      </p>
+
+      <h2 className="text-4xl font-light md:text-5xl">
+        Ready to plan a rail journey?
+      </h2>
+
+      <p className="mt-6 leading-8 text-white/70">
+        Tell us where you want to go and we’ll help shape the right rail
+        experience, from route and cabin choice to timings, extensions and
+        protection.
+      </p>
+
+      <div className="mt-8 rounded-2xl border border-white/10 bg-white/[0.04] p-6">
+        <img
+          src="/tta-logo.png"
+          alt="Travel Trust Network Group"
+          className="mb-5 h-14 w-auto"
+        />
+
+        <h3 className="text-2xl font-light text-white">
+          100% financially protected
+        </h3>
+
+        <p className="mt-4 leading-7 text-white/65">
+          Your booking is protected through our membership of the Travel Trust
+          Network Group, giving you financial peace of mind from enquiry to
+          departure.
+        </p>
+      </div>
+
+      <div className="mt-8 space-y-3 text-white/75">
+        <p>Phone: +44 7946 442509</p>
+        <p>Email: ant@outsyda.com</p>
+        <p>WhatsApp available for quick rail enquiries.</p>
+      </div>
+    </div>
+
+    <form
+      action="https://formspree.io/f/mojryyvv"
+      method="POST"
+      className="space-y-4 rounded-2xl border border-white/10 bg-black/60 p-6"
+    >
+      <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        required
+       className="w-full rounded-xl border border-white/20 bg-white/10 p-4 text-white placeholder:text-white/50 focus:border-[#ff6b5f] focus:bg-white/15"
+      />
+
+      <input
+  type="email"
+  name="email"
+  placeholder="Email Address"
+  required
+  className="w-full rounded-xl border border-white/20 bg-white/10 p-4 text-white placeholder:text-white/50 focus:border-[#ff6b5f] focus:bg-white/15 focus:outline-none"
+  autoComplete="email"
+/>
+
+      <input
+        type="tel"
+        name="phone"
+        placeholder="Phone Number"
+       className="w-full rounded-xl border border-white/20 bg-white/10 p-4 text-white placeholder:text-white/50 focus:border-[#ff6b5f] focus:bg-white/15"
+      />
+
+      <textarea
+        name="message"
+        placeholder="Tell us about your dream rail journey..."
+        rows={6}
+        required
+        className="w-full rounded-xl border border-white/20 bg-white/10 p-4 text-white placeholder:text-white/50 focus:border-[#ff6b5f] focus:bg-white/15"
+      />
+
+      <button
+        type="submit"
+       className="w-full rounded-xl border border-white/20 bg-white/10 p-4 text-white placeholder:text-white/50 focus:border-[#ff6b5f] focus:bg-white/15"
+      >
+        Send Enquiry
+      </button>
+    </form>
+  </div>
+</section>
+      <footer className="border-t border-white/10 px-6 py-10 text-center text-sm text-white/40">
+        © 2026 Outsyda Rail. All rights reserved.
       </footer>
     </main>
   );
