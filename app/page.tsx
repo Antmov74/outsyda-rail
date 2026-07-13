@@ -8,11 +8,11 @@ export default function HomePage() {
       copy: "Alpine rail icons, mountain villages and panoramic routes.",
     },
     {
-      title: "Eastern Oriental Express",
-      href: "/journeys/eastern-oriental-express",
+      title: "Belmond Journeys",
+      href: "/journeys/belmond",
       image:
         "https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?auto=format&fit=crop&w=1200&q=80",
-      copy: "Southeast Asian luxury rail with atmosphere and tropical landscapes.",
+      copy: "Discover the world's most iconic luxury rail experiences from Belmond.",
     },
     {
       title: "Rovos Rail",
@@ -72,9 +72,9 @@ export default function HomePage() {
     </h1>
 
     <p className="mt-8 max-w-3xl border-l-2 border-[#ff6b5f] pl-6 text-lg leading-8 text-white/80">
-      From the Rocky Mountaineer and Glacier Express to the Eastern &
-      Oriental Express and Rovos Rail, discover unforgettable journeys
-      curated by Outsyda Rail.
+    From Belmond&apos;s world-famous rail experiences and the Maharajas&apos; Express to Rovos Rail&apos;s legendary journeys through Southern Africa and Switzerland&apos;s panoramic mountain railways, discover the world&apos;s most remarkable train adventures.
+
+
     </p>
 
     <div className="mt-10 flex flex-wrap gap-4">
@@ -95,40 +95,40 @@ export default function HomePage() {
   </div>
 </section>   
 
-      <section id="journeys" className="bg-white/[0.03] px-6 py-24">
-        <div className="mx-auto max-w-7xl">
-          <p className="mb-4 text-sm uppercase tracking-[0.35em] text-[#ff6b5f]">
-            Featured Journeys
-          </p>
+     <section id="journeys" className="bg-white/[0.03] px-6 py-24">
+  <div className="mx-auto max-w-7xl">
+    <p className="mb-4 text-sm uppercase tracking-[0.35em] text-[#ff6b5f]">
+      Featured Journeys
+    </p>
 
-          <h2 className="max-w-3xl text-4xl font-light md:text-5xl">
-            Start with the world’s great rail experiences.
-          </h2>
+    <h2 className="max-w-3xl text-4xl font-light md:text-5xl">
+      Start with the world’s great rail experiences.
+    </h2>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {journeys.map((journey) => (
-              <a
-                key={journey.title}
-                href={journey.href}
-                className="group overflow-hidden rounded-[2rem] border border-white/10 bg-black transition hover:border-[#ff6b5f]/60"
-              >
-                <img
-                  src={journey.image}
-                  alt={journey.title}
-                  className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
-                />
+    <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      {journeys.map((journey) => (
+        <a
+          key={journey.title}
+          href={journey.href}
+          className="group overflow-hidden rounded-[2rem] border border-white/10 bg-black transition hover:-translate-y-1 hover:border-[#ff6b5f]/60"
+        >
+          <img
+            src={journey.image}
+            alt={journey.title}
+            className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
+          />
 
-                <div className="p-6">
-                  <h3 className="text-2xl font-light">{journey.title}</h3>
-                  <p className="mt-4 leading-7 text-white/65">
-                    {journey.copy}
-                  </p>
-                </div>
-              </a>
-            ))}
+          <div className="p-6">
+            <h3 className="text-2xl font-light">{journey.title}</h3>
+            <p className="mt-4 leading-7 text-white/65">
+              {journey.copy}
+            </p>
           </div>
-        </div>
-      </section>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
 
       <section id="why-outsydA" className="px-6 py-24">
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-3">
