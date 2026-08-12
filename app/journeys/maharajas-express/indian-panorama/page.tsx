@@ -73,7 +73,7 @@ export default function IndianPanoramaPage() {
             Day by Day Journey
           </h2>
 
-          <div className="grid grid-cols-2 gap-8">
+         <div className="grid gap-8 md:grid-cols-2">
 
             <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]">
               <img
