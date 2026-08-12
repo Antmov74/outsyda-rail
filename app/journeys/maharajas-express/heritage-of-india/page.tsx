@@ -18,9 +18,16 @@ export default function HeritageOfIndiaPage() {
 
         <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-6">
           <div className="max-w-3xl">
-            <p className="mb-5 text-sm uppercase tracking-[0.35em] text-[#ff6b5f]">
-              Maharajas&apos; Express
-            </p>
+  <a
+    href="/journeys/maharajas-express"
+    className="mb-10 inline-flex items-center text-sm font-semibold uppercase tracking-[0.2em] text-white/70 transition hover:text-[#ff6b5f]"
+  >
+    ← Back to Maharajas&apos; Express
+  </a>
+
+  <p className="mb-5 text-sm uppercase tracking-[0.35em] text-[#ff6b5f]">
+    Maharajas&apos; Express
+  </p>
 
             <h1 className="text-5xl font-light md:text-7xl">
               The Heritage of India
@@ -146,13 +153,13 @@ export default function HeritageOfIndiaPage() {
               </p>
             </div>
 
-                          <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-4">
+                              <div className="overflow-hidden rounded-3xl border border-white/15 bg-white p-4 shadow-2xl">
                 <img
                   src="/journeys/maharajas-express/maps/heritage-of-india-map.png"
                   alt="Map showing the Heritage of India route on the Maharajas Express"
                   className="w-full rounded-2xl"
                 />
-              </div>
+              </div>         
           </div>
         </section>
             <section className="bg-[#0a0a0a] px-6 py-24">

@@ -17,7 +17,12 @@ export default function TreasuresOfIndiaPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/20" />
 
         <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-6">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl"><a
+  href="/journeys/maharajas-express"
+  className="mb-10 inline-flex items-center text-sm font-semibold uppercase tracking-[0.2em] text-white/70 transition hover:text-[#ff6b5f]"
+>
+  ← Back to Maharajas&apos; Express
+</a>
             <p className="mb-5 text-sm uppercase tracking-[0.35em] text-[#ff6b5f]">
               Maharajas&apos; Express
             </p>
@@ -147,13 +152,13 @@ export default function TreasuresOfIndiaPage() {
               </p>
             </div>
 
-            <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-4">
-              <img
-                src="/journeys/maharajas-express/maps/treasures-of-india-map.png"
-                alt="Map showing the Treasures of India route on the Maharajas Express"
-                className="w-full rounded-2xl"
-              />
-            </div>
+                          <div className="overflow-hidden rounded-3xl border border-white/15 bg-white p-4 shadow-2xl">
+                <img
+                  src="/journeys/maharajas-express/maps/treasures-of-india-map.png"
+                  alt="Map showing the Treasures of India route on the Maharajas Express"
+                  className="w-full rounded-2xl"
+                />
+              </div>
           </div>
         </section>
       <section className="bg-[#0a0a0a] px-6 py-24">
