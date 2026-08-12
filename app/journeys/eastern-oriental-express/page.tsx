@@ -1,115 +1,138 @@
+import Header from "@/components/Header";
+import FinancialProtection from "@/components/FinancialProtection";
+import Footer from "@/components/Footer";
+
 export default function EasternOrientalExpressPage() {
   return (
-    <main className="min-h-screen bg-[#080A0D] text-white">
-      <section className="relative flex min-h-screen items-center overflow-hidden px-5 py-28">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-40"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1528702748617-c64d49f918af?auto=format&fit=crop&w=1800&q=80')",
-          }}
+    <main className="bg-black text-white">
+      <Header />
+
+      <section className="relative min-h-screen overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1528702748617-c64d49f918af?auto=format&fit=crop&w=1800&q=80"
+          alt="Eastern and Oriental Express"
+          className="absolute inset-0 h-full w-full object-cover opacity-50"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/20" />
 
-        <div className="relative mx-auto max-w-7xl">
-          <a href="/" className="mb-8 inline-block text-[#ff8e8e]">
-            ← Back to Outsyda Rail
-          </a>
+        <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-6">
+          <div className="max-w-3xl">
+            <p className="mb-5 text-sm uppercase tracking-[0.35em] text-[#ff6b5f]">
+              Belmond Eastern &amp; Oriental Express
+            </p>
 
-          <p className="mb-5 inline-flex rounded-full border border-[#ff8e8e]/40 bg-[#ff8e8e]/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.25em] text-[#ffb3b3]">
+            <h1 className="text-5xl font-light md:text-6xl">
+              Luxury rail through Southeast Asia
+            </h1>
+
+            <p className="mt-8 text-xl text-white/80">
+              A glamorous rail journey through Singapore, Malaysia and Thailand,
+              combining tropical landscapes, fine dining and Belmond service.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#0a0a0a] px-6 py-24">
+        <div className="mx-auto max-w-6xl">
+          <p className="mb-6 text-sm uppercase tracking-[0.35em] text-[#ff6b5f]">
             Singapore · Malaysia · Thailand
           </p>
 
-          <h1 className="max-w-4xl text-5xl font-black leading-tight md:text-7xl">
-            The Eastern & Oriental Express through Southeast Asia.
-          </h1>
+          <h2 className="mb-8 text-4xl font-light md:text-5xl">
+            Old-world rail glamour in Southeast Asia
+          </h2>
 
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-white/75">
-            Old-world rail glamour meets tropical landscapes, luxury service,
-            vibrant cities and unforgettable Southeast Asian adventure.
+          <p className="max-w-4xl text-lg leading-relaxed text-white/70">
+            The Eastern &amp; Oriental Express is one of the world&apos;s most
+            atmospheric luxury trains, pairing elegant interiors and refined
+            service with tropical scenery, cultural stops and Southeast Asian
+            adventure.
           </p>
 
-          <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-            <a
-              href="/#inquiry"
-              className="rounded-full bg-[#ff6b6b] px-8 py-4 text-center font-bold text-black hover:bg-[#ff8e8e]"
-            >
-              Plan this journey
-            </a>
+          <p className="mt-6 max-w-4xl text-lg leading-relaxed text-white/70">
+            This page will be expanded following our Belmond discussions, with
+            stronger route detail, cabin information, departure options and
+            supplier-approved imagery once available.
+          </p>
+        </div>
+      </section>
 
-            <a
-              href="https://wa.me/447946442509"
-              target="_blank"
-              className="rounded-full border border-white/25 px-8 py-4 text-center font-bold text-white hover:border-[#ff8e8e] hover:text-[#ff8e8e]"
-            >
-              WhatsApp Outsyda
-            </a>
+      <section className="bg-black px-6 py-24">
+        <div className="mx-auto max-w-7xl">
+          <p className="mb-6 text-sm uppercase tracking-[0.35em] text-[#ff6b5f]">
+            Journey Style
+          </p>
+
+          <h2 className="mb-12 text-4xl font-light md:text-5xl">
+            What this journey can include
+          </h2>
+
+          <div className="grid gap-8 md:grid-cols-3">
+            <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8">
+              <h3 className="mb-4 text-2xl font-light">
+                Belmond luxury
+              </h3>
+
+              <p className="text-white/70">
+                Elegant cabins, refined onboard service, atmospheric interiors
+                and the sense of occasion that defines Belmond rail travel.
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8">
+              <h3 className="mb-4 text-2xl font-light">
+                Tropical landscapes
+              </h3>
+
+              <p className="text-white/70">
+                Southeast Asian scenery, cultural stops, jungle landscapes,
+                temples, cities and slow travel through a cinematic region.
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8">
+              <h3 className="mb-4 text-2xl font-light">
+                Tailor-made extensions
+              </h3>
+
+              <p className="text-white/70">
+                Singapore stays, Bangkok hotels, beach escapes, food tours and
+                adventure-led extensions before or after the rail journey.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="px-5 py-24">
-        <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-3">
-          <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-8">
-            <h2 className="text-2xl font-black text-[#ff8e8e]">
-              Best time to go
-            </h2>
-
-            <p className="mt-4 text-white/70">
-              November to March is ideal for drier weather and comfortable
-              tropical travel.
-            </p>
-          </div>
-
-          <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-8">
-            <h2 className="text-2xl font-black text-[#ff8e8e]">
-              Suggested length
-            </h2>
-
-            <p className="mt-4 text-white/70">
-              Around 10–14 days works perfectly with Singapore, Kuala Lumpur,
-              Penang and Bangkok.
-            </p>
-          </div>
-
-          <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-8">
-            <h2 className="text-2xl font-black text-[#ff8e8e]">
-              Travel style
-            </h2>
-
-            <p className="mt-4 text-white/70">
-              Luxury rail, tropical cities, fine dining, culture, jungle
-              scenery and iconic Southeast Asian experiences.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-white/[0.03] px-5 py-24">
-        <div className="mx-auto max-w-4xl">
-          <h2 className="text-4xl font-black">Why this journey is special</h2>
-
-          <p className="mt-6 leading-8 text-white/70">
-            The Eastern & Oriental Express is one of the world’s most iconic
-            luxury trains — elegant interiors, exceptional dining and a route
-            that combines tropical landscapes with rich cultural experiences.
+      <section className="bg-[#0a0a0a] px-6 py-24">
+        <div className="mx-auto max-w-5xl text-center">
+          <p className="mb-6 text-sm uppercase tracking-[0.35em] text-[#ff6b5f]">
+            Start Planning
           </p>
 
-          <p className="mt-6 leading-8 text-white/70">
-            This journey works brilliantly when paired with rooftop hotels,
-            island escapes, food experiences and proper adventure before or
-            after the rail experience.
+          <h2 className="mb-8 text-4xl font-light md:text-5xl">
+            Ready to experience the Eastern &amp; Oriental Express?
+          </h2>
+
+          <p className="mx-auto mb-10 max-w-3xl text-lg leading-relaxed text-white/70">
+            Speak with Outsyda Rail about Belmond rail journeys through
+            Southeast Asia, including route options, hotel stays and
+            tailor-made extensions.
           </p>
 
           <a
-            href="/#inquiry"
-            className="mt-10 inline-block rounded-full bg-[#ff6b6b] px-8 py-4 font-bold text-black hover:bg-[#ff8e8e]"
+            href="mailto:ant@outsyda.com"
+            className="inline-flex rounded-full bg-[#ff6b5f] px-8 py-4 text-sm font-semibold uppercase tracking-[0.25em] text-black transition hover:bg-white"
           >
-            Start planning Southeast Asia
+            Enquire Now
           </a>
         </div>
       </section>
+
+      <FinancialProtection />
+      <Footer />
     </main>
   );
 }

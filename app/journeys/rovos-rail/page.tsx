@@ -12,7 +12,7 @@ export default function RovosRailPage() {
   const routes = [
     {
       title: "Cape Town Journey",
-      duration: "2 nights / 3 days",
+    duration: "3 nights / 4 days",
       price: "Guide Price From £1,950pp",
       href: "/journeys/rovos-rail/cape-town-journey",
       image: "/journeys/rovos-rail/Hero Images/RVR-HexRiverValley3-HRes.jpg",

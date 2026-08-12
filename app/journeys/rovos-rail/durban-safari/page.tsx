@@ -18,7 +18,7 @@ export default function DurbanSafariPage() {
       >
         <div className="absolute inset-0 bg-black/55" />
 
-        <div className="relative z-10 mx-auto flex min-h-[80vh] max-w-6xl flex-col justify-center px-6 py-24">
+<div className="relative z-[60] mx-auto flex min-h-[80vh] max-w-6xl flex-col justify-center px-6 py-24">
           <Link
             href="/journeys/rovos-rail"
             className="relative z-50 mb-8 w-fit cursor-pointer text-sm uppercase tracking-[0.25em] text-[#ff6b5f] transition hover:text-white"

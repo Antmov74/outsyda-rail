@@ -1,4 +1,4 @@
-import Link from "next/link";
+
 import Header from "@/components/Header";
 import FinancialProtection from "@/components/FinancialProtection";
 import Footer from "@/components/Footer";
@@ -17,13 +17,13 @@ export default function SouthernCrossPage() {
       >
         <div className="absolute inset-0 bg-black/55" />
 
-        <div className="relative z-10 mx-auto flex min-h-[80vh] max-w-6xl flex-col justify-center px-6 py-24">
-          <Link
+     <div className="relative z-[60] mx-auto flex min-h-[80vh] max-w-6xl flex-col justify-center px-6 py-24">
+   <a
   href="/journeys/rovos-rail"
   className="relative z-50 mb-8 w-fit cursor-pointer text-sm uppercase tracking-[0.25em] text-[#ff6b5f] transition hover:text-white"
 >
   Back to Rovos Rail
-</Link>
+</a>
           <p className="mb-4 text-sm uppercase tracking-[0.35em] text-[#ff6b5f]">
             Rovos Rail
           </p>
@@ -33,7 +33,9 @@ export default function SouthernCrossPage() {
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">
             A grand Southern African rail journey linking dramatic landscapes,
             wildlife, historic places and Rovos Rail’s signature slow luxury.
-          </p><a
+          </p>
+
+<a
   href="#enquire"
   className="mt-8 inline-flex w-fit rounded-full bg-[#ff6b5f] px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-black transition hover:bg-white"
 >

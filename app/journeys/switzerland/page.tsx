@@ -34,41 +34,6 @@ export default function SwitzerlandJourneyPage() {
     },
   ];
 
-  const routeMaps = [
-    {
-      title: "Glacier Express",
-      route: "Zermatt to St Moritz",
-      href: "/journeys/switzerland/glacier-express",
-      image: "/journeys/switzerland/maps/glacier-express-map.png",
-      alt: "Glacier Express route map",
-      copy: "Switzerland's classic alpine crossing through valleys, mountain passes and panoramic rail scenery.",
-    },
-    {
-      title: "Bernina Express",
-      route: "Chur to Tirano",
-      href: "/journeys/switzerland/bernina-express",
-      image: "/journeys/switzerland/maps/bernina-express-map.png",
-      alt: "Bernina Express route map",
-      copy: "A dramatic UNESCO-listed route from glaciers and viaducts to Italian-speaking Switzerland.",
-    },
-    {
-      title: "GoldenPass Express",
-      route: "Montreux to Interlaken",
-      href: "/journeys/switzerland/goldenpass-express",
-      image: "/journeys/switzerland/maps/goldenpass-express-map.png",
-      alt: "GoldenPass Express route map",
-      copy: "A beautifully paced panoramic journey linking lake country, chalet villages and alpine gateways.",
-    },
-    {
-      title: "Grand Train Tour of Switzerland",
-      route: "Multi-route Switzerland",
-      href: "/journeys/switzerland/grand-train-tour",
-      image: "/journeys/switzerland/maps/grand-train-tour-map.png",
-      alt: "Grand Train Tour of Switzerland route map",
-      copy: "The big-picture Swiss rail journey, connecting the country's most celebrated scenic lines.",
-    },
-  ];
-
   return (
     <main className="bg-black text-white">
       <Header />
@@ -94,8 +59,8 @@ export default function SwitzerlandJourneyPage() {
 
             <p className="mt-8 text-xl leading-9 text-white/80">
               From the Glacier Express and Bernina Express to the GoldenPass
-              Express and Grand Train Tour of Switzerland, explore the country’s
-              most scenic rail routes with Outsyda Rail.
+              Express and Grand Train Tour of Switzerland, explore the
+              country&apos;s most scenic rail routes with Outsyda Rail.
             </p>
           </div>
         </div>
@@ -112,63 +77,12 @@ export default function SwitzerlandJourneyPage() {
           </h2>
 
           <p className="max-w-4xl text-lg leading-relaxed text-white/70">
-            Switzerland is one of the world’s great rail destinations, combining
-            precise connections, panoramic trains, mountain resorts, lakeside
-            towns and elegant hotels. We shape the route, pace and accommodation
-            around how each traveller wants to experience the Alps.
+            Switzerland is one of the world&apos;s great rail destinations,
+            combining precise connections, panoramic trains, mountain resorts,
+            lakeside towns and elegant hotels. We shape the route, pace and
+            accommodation around how each traveller wants to experience the
+            Alps.
           </p>
-        </div>
-      </section>
-
-      <section className="bg-black px-6 py-24">
-        <div className="mx-auto max-w-7xl">
-          <p className="mb-6 text-sm uppercase tracking-[0.35em] text-[#ff6b5f]">
-            Route Maps
-          </p>
-
-          <h2 className="mb-8 text-4xl font-light md:text-5xl">
-            See how Switzerland&apos;s great rail journeys connect.
-          </h2>
-
-          <p className="mb-12 max-w-4xl text-lg leading-relaxed text-white/70">
-            From high alpine crossings to lake-edge routes and panoramic
-            railways, these maps help travellers understand the shape, scale and
-            feel of each Swiss rail experience before choosing the right journey.
-          </p>
-
-          <div className="grid gap-8 md:grid-cols-2">
-            {routeMaps.map((map) => (
-              <a
-                key={map.title}
-                href={map.href}
-                className="group flex h-full flex-col rounded-[2rem] border border-white/10 bg-white p-6 text-black shadow-2xl shadow-black/30 transition duration-300 hover:-translate-y-1 hover:border-[#ff6b5f] hover:shadow-[#ff6b5f]/20"
-              >
-                <div className="flex h-72 items-center justify-center rounded-2xl bg-[#f5f1e8] p-4">
-                  <img
-                    src={map.image}
-                    alt={map.alt}
-                    className="max-h-full w-full object-contain"
-                  />
-                </div>
-
-                <div className="flex flex-1 flex-col pt-6">
-                  <p className="mb-3 text-sm uppercase tracking-[0.25em] text-[#ff6b5f]">
-                    {map.route}
-                  </p>
-
-                  <h3 className="text-2xl font-light">{map.title}</h3>
-
-                  <p className="mt-4 flex-1 leading-7 text-black/65">
-                    {map.copy}
-                  </p>
-
-                  <p className="mt-6 text-sm font-semibold uppercase tracking-[0.25em] text-[#ff6b5f]">
-                    Explore Journey →
-                  </p>
-                </div>
-              </a>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -179,7 +93,7 @@ export default function SwitzerlandJourneyPage() {
           </p>
 
           <h2 className="mb-12 text-4xl font-light md:text-5xl">
-            Start with Switzerland’s great rail routes.
+            Start with Switzerland&apos;s great rail routes.
           </h2>
 
           <div className="grid gap-8 md:grid-cols-2">
@@ -212,7 +126,7 @@ export default function SwitzerlandJourneyPage() {
         </div>
       </section>
 
-      <section className="bg-[#0a0a0a] px-6 py-24">
+      <section id="enquire" className="bg-[#0a0a0a] px-6 py-24">
         <div className="mx-auto max-w-5xl text-center">
           <p className="mb-6 text-sm uppercase tracking-[0.35em] text-[#ff6b5f]">
             Start Planning
@@ -228,7 +142,7 @@ export default function SwitzerlandJourneyPage() {
           </p>
 
           <a
-            href="mailto:ant@outsyda.com"
+            href="mailto:ant@outsyda.com?subject=Switzerland%20Rail%20Enquiry"
             className="inline-flex rounded-full bg-[#ff6b5f] px-8 py-4 text-sm font-semibold uppercase tracking-[0.25em] text-black transition hover:bg-white"
           >
             Enquire Now

@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <header className="absolute left-0 top-0 z-30 w-full px-6 py-6">
+<header className="absolute left-0 top-0 z-[80] w-full px-6 py-6">
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         <a href="/" className="inline-flex items-center">
           <img
