@@ -2,7 +2,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import FinancialProtection from "@/components/FinancialProtection";
 import Footer from "@/components/Footer";
-
+import BritannicEmailLink from "@/components/BritannicEmailLink";
 export const metadata = {
   title: "Britannic Explorer | Outsyda Rail",
   description:
@@ -376,12 +376,7 @@ export default function BritannicExplorerPage() {
           </p>
 
           <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <a
-              href="mailto:ant@outsyda.com?subject=Britannic Explorer Enquiry"
-              className="rounded-full bg-[#ff6b5f] px-8 py-3 font-semibold text-black transition hover:bg-white"
-            >
-              Email Outsyda
-            </a>
+            <BritannicEmailLink />
 
             <a
               href="https://wa.me/447946442509"
