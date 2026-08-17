@@ -48,21 +48,15 @@ export default function RootLayout({
             `,
           }}
         />
-      </head>
-
-      <body className="flex min-h-full flex-col">
-        {children}
-
-        <CookieConsent />
 
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-17763379589"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
         />
 
         <Script
           id="google-ads-tag"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -72,6 +66,11 @@ export default function RootLayout({
             `,
           }}
         />
+      </head>
+
+      <body className="flex min-h-full flex-col">
+        {children}
+        <CookieConsent />
       </body>
     </html>
   );
