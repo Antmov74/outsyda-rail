@@ -2,14 +2,18 @@
 
 import type { MouseEvent } from "react";
 
+type GoogleWindow = Window & {
+  dataLayer?: unknown[];
+  gtag?: (...args: unknown[]) => void;
+};
+
 export default function BritannicEmailLink() {
   function recordConversion(event: MouseEvent<HTMLAnchorElement>) {
     event.preventDefault();
 
     const emailUrl = event.currentTarget.href;
-    const googleWindow = window as Window & {
-      gtag?: (...args: unknown[]) => void;
-    };
+    const googleWindow = window as GoogleWindow;
+    const dataLayer = (googleWindow.dataLayer ??= []);
 
     let emailOpened = false;
 
@@ -20,18 +24,19 @@ export default function BritannicEmailLink() {
       window.location.href = emailUrl;
     }
 
-    if (!googleWindow.gtag) {
-      openEmail();
-      return;
+    function sendToDataLayer() {
+      dataLayer.push(arguments);
     }
 
-    googleWindow.gtag("event", "conversion", {
+    const sendToGoogle = googleWindow.gtag ?? sendToDataLayer;
+
+    sendToGoogle("event", "conversion", {
       send_to: "AW-17763379589/6eK1CK2nmeMcEIXTnpZC",
       event_callback: openEmail,
-      event_timeout: 1000,
+      event_timeout: 1500,
     });
 
-    window.setTimeout(openEmail, 1200);
+    window.setTimeout(openEmail, 1700);
   }
 
   return (
