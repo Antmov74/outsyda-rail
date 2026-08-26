@@ -10,7 +10,7 @@ export default function HomePage() {
     {
       title: "Belmond Journeys",
       href: "/journeys/belmond",
-      image: "/journeys/belmond/vsoe/VSOE-REST-52.jpg",
+     image: "/journeys/belmond/vsoe/VSOE-EXT-SCE-05.jpg",
       copy: "Discover the world's most iconic luxury rail experiences from Belmond.",
     },
     {
@@ -133,7 +133,62 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* FROM THE JOURNAL */}
+      <section className="bg-black px-6 py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
+            <div>
+              <p className="mb-4 text-sm uppercase tracking-[0.35em] text-[#ff6b5f]">
+                From the Journal
+              </p>
 
+              <h2 className="max-w-3xl text-4xl font-light md:text-5xl">
+                Stories that make the journey begin before departure.
+              </h2>
+            </div>
+
+            <a
+              href="/journal"
+              className="text-sm font-semibold text-white transition hover:text-[#ff6b5f]"
+            >
+              View the Journal →
+            </a>
+          </div>
+
+          <a
+            href="/journal/five-extraordinary-train-journeys"
+            className="group grid overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] transition hover:border-[#ff6b5f]/60 md:grid-cols-[1.2fr_0.8fr]"
+          >
+            <div className="overflow-hidden">
+              <img
+                src="/journeys/belmond/vsoe/VSOE-EXT-SCE-05.jpg"
+                alt="Luxury train travelling through the European landscape"
+                className="h-full min-h-[360px] w-full object-cover transition duration-700 group-hover:scale-105"
+              />
+            </div>
+
+            <div className="flex flex-col justify-center p-9 md:p-12">
+              <p className="text-sm uppercase tracking-[0.3em] text-[#ff6b5f]">
+                Luxury Rail
+              </p>
+
+              <h3 className="mt-5 text-3xl font-light leading-tight md:text-4xl">
+                Five extraordinary train journeys worth travelling the world
+                for
+              </h3>
+
+              <p className="mt-6 leading-8 text-white/65">
+                Explore five remarkable railway journeys through Switzerland,
+                India, Scotland, southern Africa and Europe.
+              </p>
+
+              <span className="mt-8 text-sm font-semibold transition group-hover:text-[#ff6b5f]">
+                Read the article →
+              </span>
+            </div>
+          </a>
+        </div>
+      </section>
       {/* WHY OUTSYDA */}
       <section id="why-outsyda" className="px-6 py-24">
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-3">

@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-<header className="absolute left-0 top-0 z-[80] w-full px-6 py-6">
+    <header className="absolute left-0 top-0 z-[80] w-full px-6 py-6">
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         <a href="/" className="inline-flex items-center">
           <img
@@ -10,12 +10,21 @@ export default function Header() {
           />
         </a>
 
-        <a
-          href="/#enquire"
-          className="hidden rounded-full border border-white/20 px-5 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:border-[#ff6b5f] hover:text-[#ff6b5f] md:inline-block"
-        >
-          Enquire
-        </a>
+        <div className="flex items-center gap-6">
+          <a
+            href="/journal"
+            className="text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:text-[#ff6b5f]"
+          >
+            Journal
+          </a>
+
+          <a
+            href="/#enquire"
+            className="hidden rounded-full border border-white/20 px-5 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:border-[#ff6b5f] hover:text-[#ff6b5f] md:inline-block"
+          >
+            Enquire
+          </a>
+        </div>
       </div>
     </header>
   );
