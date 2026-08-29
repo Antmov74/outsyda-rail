@@ -279,36 +279,89 @@ export default function HomePage() {
             className="space-y-4 rounded-2xl border border-white/10 bg-black/60 p-6"
           >
             <input
+              type="hidden"
+              name="subject"
+              value="New Outsyda Rail enquiry from {{ name }}"
+            />
+            <input
               type="text"
-              name="name"
-              placeholder="Your Name"
-              required
-              className="w-full rounded-xl border border-white/20 bg-white/10 p-4 text-white placeholder:text-white/50 focus:border-[#ff6b5f] focus:bg-white/15 focus:outline-none"
+              name="_gotcha"
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+              className="hidden"
             />
 
-            <input
-              type="email"
-              name="email"
-              placeholder="Email Address"
-              required
-              autoComplete="email"
-              className="w-full rounded-xl border border-white/20 bg-white/10 p-4 text-white placeholder:text-white/50 focus:border-[#ff6b5f] focus:bg-white/15 focus:outline-none"
-            />
+            <p className="text-sm text-white/65">
+              Fields marked with * are required.
+            </p>
 
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Phone Number"
-              className="w-full rounded-xl border border-white/20 bg-white/10 p-4 text-white placeholder:text-white/50 focus:border-[#ff6b5f] focus:bg-white/15 focus:outline-none"
-            />
+            <div className="space-y-2">
+              <label htmlFor="enquiry-name" className="block text-sm text-white/80">
+                Your name *
+              </label>
+              <input
+                id="enquiry-name"
+                type="text"
+                name="name"
+                autoComplete="name"
+                required
+                className="w-full rounded-xl border border-white/20 bg-white/10 p-4 text-white focus:border-[#ff6b5f] focus:bg-white/15 focus:outline-none"
+              />
+            </div>
 
-            <textarea
-              name="message"
-              placeholder="Tell us about your dream rail journey..."
-              rows={6}
-              required
-              className="w-full rounded-xl border border-white/20 bg-white/10 p-4 text-white placeholder:text-white/50 focus:border-[#ff6b5f] focus:bg-white/15 focus:outline-none"
-            />
+            <div className="space-y-2">
+              <label htmlFor="enquiry-email" className="block text-sm text-white/80">
+                Email address *
+              </label>
+              <input
+                id="enquiry-email"
+                type="email"
+                name="email"
+                autoComplete="email"
+                required
+                className="w-full rounded-xl border border-white/20 bg-white/10 p-4 text-white focus:border-[#ff6b5f] focus:bg-white/15 focus:outline-none"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <label htmlFor="enquiry-phone" className="block text-sm text-white/80">
+                Phone number
+              </label>
+              <input
+                id="enquiry-phone"
+                type="tel"
+                name="phone"
+                autoComplete="tel"
+                className="w-full rounded-xl border border-white/20 bg-white/10 p-4 text-white focus:border-[#ff6b5f] focus:bg-white/15 focus:outline-none"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <label htmlFor="enquiry-journey" className="block text-sm text-white/80">
+                Journey or destination
+              </label>
+              <input
+                id="enquiry-journey"
+                type="text"
+                name="journey"
+                placeholder="For example, Rovos Rail or Switzerland"
+                className="w-full rounded-xl border border-white/20 bg-white/10 p-4 text-white placeholder:text-white/50 focus:border-[#ff6b5f] focus:bg-white/15 focus:outline-none"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <label htmlFor="enquiry-message" className="block text-sm text-white/80">
+                Tell us about your dream rail journey *
+              </label>
+              <textarea
+                id="enquiry-message"
+                name="message"
+                rows={6}
+                required
+                className="w-full rounded-xl border border-white/20 bg-white/10 p-4 text-white focus:border-[#ff6b5f] focus:bg-white/15 focus:outline-none"
+              />
+            </div>
 
             <button
               type="submit"
@@ -316,6 +369,10 @@ export default function HomePage() {
             >
               Send Enquiry
             </button>
+
+            <p className="text-xs leading-5 text-white/55">
+              We&apos;ll use your details only to respond to your enquiry.
+            </p>
           </form>
         </div>
       </section>
