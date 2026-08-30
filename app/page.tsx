@@ -274,6 +274,7 @@ export default function HomePage() {
           </div>
 
           <form
+            id="rail-enquiry-form"
             action="https://formspree.io/f/mojryyvv"
             method="POST"
             className="space-y-4 rounded-2xl border border-white/10 bg-black/60 p-6"
@@ -373,7 +374,87 @@ export default function HomePage() {
             <p className="text-xs leading-5 text-white/55">
               We&apos;ll use your details only to respond to your enquiry.
             </p>
+
+            <p
+              id="rail-enquiry-status"
+              role="status"
+              aria-live="polite"
+              className="min-h-5 text-sm text-white/80"
+            />
           </form>
+
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=AW-17763379589"
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'AW-17763379589');
+              `,
+            }}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                (() => {
+                  const form = document.getElementById('rail-enquiry-form');
+                  const status = document.getElementById('rail-enquiry-status');
+
+                  if (!(form instanceof HTMLFormElement) || !status || form.dataset.enhanced === 'true') {
+                    return;
+                  }
+
+                  form.dataset.enhanced = 'true';
+                  form.addEventListener('submit', async (event) => {
+                    event.preventDefault();
+
+                    const button = form.querySelector('button[type="submit"]');
+                    if (button instanceof HTMLButtonElement) {
+                      button.disabled = true;
+                      button.setAttribute('aria-disabled', 'true');
+                    }
+                    status.textContent = 'Sending your enquiry…';
+
+                    try {
+                      const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: new FormData(form),
+                        headers: { Accept: 'application/json' },
+                      });
+
+                      if (!response.ok) {
+                        throw new Error('Formspree did not accept the enquiry.');
+                      }
+
+                      if (typeof window.gtag === 'function') {
+                        window.gtag('event', 'conversion', {
+                          send_to: 'AW-17763379589/R9DeCI2cg-ocEIXTnpZC',
+                          value: 1,
+                          currency: 'GBP',
+                        });
+                      }
+
+                      form.reset();
+                      status.textContent =
+                        'Thank you — your enquiry has been sent. We’ll be in touch soon.';
+                    } catch (error) {
+                      status.textContent =
+                        'Sorry, your enquiry could not be sent. Please try again or email ant@outsyda.com.';
+                    } finally {
+                      if (button instanceof HTMLButtonElement) {
+                        button.disabled = false;
+                        button.removeAttribute('aria-disabled');
+                      }
+                    }
+                  });
+                })();
+              `,
+            }}
+          />
         </div>
       </section>
 
