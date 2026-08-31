@@ -30,6 +30,27 @@ export default function MaharajasExpressPage() {
     },
   ];
 
+  const seasons = [
+    {
+      label: "2026–27",
+      departures: [
+        { journey: "The Indian Panorama", dates: "4 Oct; 1 & 29 Nov; 27 Dec 2026; 24 Jan; 21 Feb; 21 Mar 2027" },
+        { journey: "The Indian Splendour", dates: "11 Oct; 8 Nov; 6 Dec 2026; 3 & 31 Jan; 28 Feb; 28 Mar 2027" },
+        { journey: "The Heritage of India", dates: "18 Oct; 15 Nov; 13 Dec 2026; 10 Jan; 7 Feb; 7 Mar; 4 Apr 2027" },
+        { journey: "Treasures of India", dates: "30 Sep; 25 Oct; 22 Nov; 20 Dec 2026; 17 Jan; 14 Feb; 14 Mar 2027" },
+      ],
+    },
+    {
+      label: "2027–28",
+      departures: [
+        { journey: "The Indian Panorama", dates: "3 & 31 Oct; 28 Nov; 26 Dec 2027; 23 Jan; 20 Feb; 19 Mar; 9 Apr 2028" },
+        { journey: "The Indian Splendour", dates: "10 Oct; 7 Nov; 5 Dec 2027; 2 & 30 Jan; 27 Feb; 26 Mar 2028" },
+        { journey: "The Heritage of India", dates: "17 Oct; 14 Nov; 12 Dec 2027; 9 Jan; 6 Feb; 5 Mar; 2 Apr 2028" },
+        { journey: "Treasures of India", dates: "24 Oct; 21 Nov; 19 Dec 2027; 16 Jan; 13 Feb; 12 Mar 2028" },
+      ],
+    },
+  ];
+
   return (
     <main className="bg-black text-white">
       <Header />
@@ -207,6 +228,99 @@ export default function MaharajasExpressPage() {
                 </p>
               </a>
             ))}
+          </div>
+        </div>
+      </section>
+
+
+      {/* 2026–28 DATES, FARES & CURRENT OFFER */}
+      <section className="bg-black px-6 py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-14 max-w-3xl">
+            <p className="mb-6 text-sm uppercase tracking-[0.35em] text-[#ff6b5f]">
+              2026–28 Seasons
+            </p>
+            <h2 className="text-4xl font-light md:text-5xl">
+              Published fares and departure dates
+            </h2>
+            <p className="mt-6 text-lg leading-relaxed text-white/70">
+              Choose from two published seasons, with four routes operating
+              between September and April. Outsyda can check cabin availability
+              and build flights, hotels and private touring around your journey.
+            </p>
+          </div>
+
+          <div className="mb-14 overflow-x-auto rounded-3xl border border-white/10">
+            <table className="w-full min-w-[760px] text-left">
+              <thead className="bg-white/[0.06] text-sm uppercase tracking-[0.2em] text-white/60">
+                <tr>
+                  <th className="px-6 py-5 font-medium">Journey</th>
+                  <th className="px-6 py-5 font-medium">Deluxe</th>
+                  <th className="px-6 py-5 font-medium">Junior Suite</th>
+                  <th className="px-6 py-5 font-medium">Suite</th>
+                  <th className="px-6 py-5 font-medium">Presidential Suite</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-white/10 text-white/75">
+                {[
+                  ["Indian Splendour", "US$8,400", "US$10,700", "US$15,600", "US$26,800"],
+                  ["Heritage of India", "US$8,800", "US$11,200", "US$15,600", "US$26,800"],
+                  ["Indian Panorama", "US$8,400", "US$10,700", "US$15,600", "US$26,800"],
+                  ["Treasures of India", "US$5,300", "US$5,700", "US$8,600", "US$14,600"],
+                ].map((fare) => (
+                  <tr key={fare[0]}>
+                    {fare.map((value, index) => (
+                      <td key={value} className={`px-6 py-5 ${index === 0 ? "text-white" : ""}`}>
+                        {value}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <p className="mb-16 max-w-4xl text-sm leading-6 text-white/50">
+            Published US-dollar fares are per person, per journey, based on two
+            guests sharing and apply to both the 2026–27 and 2027–28 seasons.
+            Government taxes are extra. Fares, routes and departures remain
+            subject to availability and change.
+          </p>
+
+          <div className="grid gap-8 lg:grid-cols-2">
+            {seasons.map((season) => (
+              <div key={season.label} className="rounded-3xl border border-white/10 bg-white/[0.03] p-8">
+                <p className="mb-6 text-sm uppercase tracking-[0.3em] text-[#ff6b5f]">
+                  Season {season.label}
+                </p>
+                <div className="space-y-6">
+                  {season.departures.map((item) => (
+                    <div key={item.journey}>
+                      <h3 className="text-xl font-light">{item.journey}</h3>
+                      <p className="mt-2 leading-7 text-white/60">{item.dates}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 rounded-3xl border border-[#ff6b5f]/40 bg-[#ff6b5f]/10 p-8">
+            <p className="text-sm uppercase tracking-[0.3em] text-[#ff6b5f]">Current offer</p>
+            <h3 className="mt-4 text-3xl font-light">Your companion pays 50%</h3>
+            <p className="mt-4 max-w-4xl leading-7 text-white/70">
+              On the 30 September and 25 October 2026 Treasures of India
+              departures, the second adult sharing the same cabin receives 50%
+              off the adult fare when the first adult pays the full twin-share
+              fare. Available across all cabin categories, subject to cabin
+              availability and the operator&apos;s full terms.
+            </p>
+            <a
+              href="mailto:ant@outsyda.com?subject=Maharajas%27%20Express%20companion%20offer"
+              className="mt-7 inline-flex rounded-full bg-[#ff6b5f] px-7 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-black transition hover:bg-white"
+            >
+              Check Availability
+            </a>
           </div>
         </div>
       </section>
