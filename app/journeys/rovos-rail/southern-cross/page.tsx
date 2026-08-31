@@ -187,6 +187,52 @@ export default function SouthernCrossPage() {
       <section className="bg-white/[0.04] px-6 py-24">
         <div className="mx-auto max-w-6xl">
           <p className="text-sm uppercase tracking-[0.3em] text-[#ff6b5f]">
+            Provisional 2027 Rates
+          </p>
+
+          <h2 className="mt-4 max-w-3xl text-3xl font-semibold md:text-4xl">
+            Choose your suite
+          </h2>
+
+          <p className="mt-6 max-w-3xl leading-8 text-white/75">
+            One-way Rovos Rail fares for selected 2027 departures. Prices are
+            per person sharing.
+          </p>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {[
+              ["Pullman Suite", "R179,000"],
+              ["Deluxe Suite", "R255,000"],
+              ["Royal Suite", "R339,500"],
+            ].map(([suite, price]) => (
+              <article
+                key={suite}
+                className="rounded-2xl border border-white/10 bg-black p-8"
+              >
+                <h3 className="text-xl font-semibold text-white/75">{suite}</h3>
+                <p className="mt-4 text-3xl font-light text-[#ff6b5f]">
+                  From {price}
+                </p>
+                <p className="mt-3 text-sm text-white/55">
+                  Per person sharing
+                </p>
+              </article>
+            ))}
+          </div>
+
+          <p className="mt-8 max-w-4xl text-sm leading-6 text-white/55">
+            Rates are provisional and subject to availability and confirmation
+            at the time of booking. Single occupancy rates are available on
+            request. Flights, pre- and post-tour accommodation, transfers,
+            visas, gratuities and travel insurance are not included unless
+            stated.
+          </p>
+        </div>
+      </section>
+
+      <section className="bg-white/[0.04] px-6 py-24">
+        <div className="mx-auto max-w-6xl">
+          <p className="text-sm uppercase tracking-[0.3em] text-[#ff6b5f]">
             Accommodation
           </p>
 
