@@ -299,10 +299,7 @@ export default function SouthernCrossPage() {
         </div>
       </section>
 
-      <section className="bg-white/[0.03] px-6 py-24">
-        <div className="mx-auto max-w-6xl">
-          <p className="mb-4 text-sm uppercase tracking-[0.35em] text-[#ff6b5f]">
-            <JourneyTimeline
+      <JourneyTimeline
   title="Southern Cross Expedition"
   introduction="An unforgettable eleven-night rail expedition across Southern Africa, combining historic towns, wildlife reserves, dramatic scenery and Rovos Rail's signature luxury."
   days={[
@@ -340,6 +337,11 @@ export default function SouthernCrossPage() {
     },
   ]}
 />
+
+      <section className="bg-white/[0.03] px-6 py-24">
+        <div className="mx-auto max-w-6xl">
+          <p className="mb-4 text-sm uppercase tracking-[0.35em] text-[#ff6b5f]">
+
             Route Map
           </p>
 
