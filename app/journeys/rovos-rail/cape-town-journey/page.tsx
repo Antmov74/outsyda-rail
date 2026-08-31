@@ -147,6 +147,51 @@ export default function CapeTownJourneyPage() {
         />
       </section>
 
+      <section className="bg-white/[0.04] px-6 py-24">
+        <div className="mx-auto max-w-7xl">
+          <p className="mb-4 text-sm uppercase tracking-[0.35em] text-[#ff6b5f]">
+            Provisional 2026–27 Rates
+          </p>
+
+          <h2 className="max-w-3xl text-4xl font-light md:text-5xl">
+            Choose your suite
+          </h2>
+
+          <p className="mt-6 max-w-3xl leading-8 text-white/70">
+            One-way Rovos Rail fares for travel from 1 October 2026 to 30
+            September 2027. Prices are per person sharing.
+          </p>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {[
+              ["Pullman Suite", "R54,000"],
+              ["Deluxe Suite", "R78,000"],
+              ["Royal Suite", "R104,000"],
+            ].map(([suite, price]) => (
+              <article
+                key={suite}
+                className="rounded-[2rem] border border-white/10 bg-black p-8"
+              >
+                <h3 className="text-xl font-light text-white/75">{suite}</h3>
+                <p className="mt-4 text-3xl font-light text-[#ff6b5f]">
+                  From {price}
+                </p>
+                <p className="mt-3 text-sm text-white/55">
+                  Per person sharing
+                </p>
+              </article>
+            ))}
+          </div>
+
+          <p className="mt-8 max-w-4xl text-sm leading-6 text-white/55">
+            Rates are provisional and subject to availability and confirmation
+            at the time of booking. Single occupancy supplements apply. Flights,
+            pre- and post-tour accommodation, transfers, visas, gratuities and
+            travel insurance are not included unless stated.
+          </p>
+        </div>
+      </section>
+
       <section className="px-6 py-24">
         <div className="mx-auto max-w-7xl">
           <p className="mb-4 text-sm uppercase tracking-[0.35em] text-[#ff6b5f]">
