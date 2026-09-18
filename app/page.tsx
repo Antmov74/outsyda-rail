@@ -1,3 +1,5 @@
+import EmailSignup from "@/components/EmailSignup";
+
 export default function HomePage() {
   const journeys = [
     {
@@ -221,6 +223,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <EmailSignup />
 
       {/* ENQUIRY */}
       <section id="enquire" className="relative overflow-hidden px-6 py-24">
