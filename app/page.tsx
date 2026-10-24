@@ -434,13 +434,32 @@ export default function HomePage() {
                         throw new Error('Formspree did not accept the enquiry.');
                       }
 
-                      if (typeof window.gtag === 'function') {
-                        window.gtag('event', 'conversion', {
-                          send_to: 'AW-17763379589/R9DeCI2cg-ocEIXTnpZC',
-                          value: 1,
-                          currency: 'GBP',
-                        });
-                      }
+                     if (typeof window.gtag === 'function') {
+  let trackingAccepted = false;
+
+  try {
+    trackingAccepted =
+      localStorage.getItem('outsyda-rail-cookie-consent') === 'accepted';
+  } catch {}
+
+  const email = String(
+    new FormData(form).get('email') || ''
+  ).trim().toLowerCase();
+
+  window.gtag(
+    'set',
+    'user_data',
+    trackingAccepted && email ? { email: email } : {}
+  );
+
+  window.gtag('event', 'conversion', {
+    send_to: 'AW-17763379589/R9DeCI2cg-ocEIXTnpZC',
+    value: 1,
+    currency: 'GBP',
+  });
+
+  window.gtag('set', 'user_data', {});
+}
 
                       form.reset();
                       status.textContent =
