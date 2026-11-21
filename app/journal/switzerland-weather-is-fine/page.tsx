@@ -62,6 +62,18 @@ export default function SwitzerlandBookPage() {
               Email Melvyn To Order
             </a>
             <p className="mt-4 break-words text-base text-white/75">{email}</p>
+
+            <div className="mt-6 border-t border-white/15 pt-6">
+              <a
+                href="https://www.ebay.co.uk/itm/900085996544"
+                className="inline-flex rounded-full border border-white/40 px-6 py-3 text-base font-semibold transition hover:border-white hover:bg-white hover:text-black focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ff6b5f]"
+              >
+                Buy On eBay
+              </a>
+              <p className="mt-3 text-base text-white/70">
+                See eBay for its price and delivery details.
+              </p>
+            </div>
           </section>
         </div>
       </article>
