@@ -137,12 +137,23 @@ export default function SwitzerlandJourneyPage() {
             Swiss travels. Order the printed book directly from Melvyn for
             £14.95, plus postage if needed.
           </p>
-          <Link
-            href="/journal/switzerland-weather-is-fine"
-            className="mt-6 inline-block text-base font-semibold text-[#ff6b5f] hover:underline"
-          >
-            View The Book
-          </Link>
+          <div className="mt-6 flex flex-wrap items-center gap-4">
+            <Link
+              href="/journal/switzerland-weather-is-fine"
+              className="text-base font-semibold text-[#ff6b5f] hover:underline"
+            >
+              View The Book
+            </Link>
+            <a
+              href="https://www.ebay.co.uk/itm/900085996544"
+              className="inline-flex rounded-full border border-white/40 px-6 py-3 text-base font-semibold transition hover:border-white hover:bg-white hover:text-black focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ff6b5f]"
+            >
+              Buy On eBay
+            </a>
+          </div>
+          <p className="mt-3 text-base text-white/70">
+            See eBay for its price and delivery details.
+          </p>
         </div>
       </section>
 
