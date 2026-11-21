@@ -67,6 +67,22 @@ export default function JournalPage() {
               </span>
             </div>
           </Link>
+
+          <Link
+            href="/journal/switzerland-weather-is-fine"
+            className="mt-8 block rounded-[2rem] border border-white/10 bg-[#0b0b0b] p-8 transition hover:border-[#ff6b5f]/60 md:p-12"
+          >
+            <h2 className="text-3xl font-light leading-tight">
+              Switzerland. Weather is fine, wish you were here
+            </h2>
+            <p className="mt-4 text-base leading-7 text-white/75">
+              Six decades of Swiss travels in stories and photographs by
+              Drybrook author Melvyn Wilkins.
+            </p>
+            <span className="mt-6 inline-block text-base font-semibold text-[#ff6b5f]">
+              View The Book
+            </span>
+          </Link>
         </div>
       </section>
 

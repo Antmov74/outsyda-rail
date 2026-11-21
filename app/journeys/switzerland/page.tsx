@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Header from "@/components/Header";
 import FinancialProtection from "@/components/FinancialProtection";
 import Footer from "@/components/Footer";
@@ -123,6 +124,25 @@ export default function SwitzerlandJourneyPage() {
               </a>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="swiss-book-heading" className="px-6 pb-24">
+        <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-[#0b0b0b] p-8 md:p-12">
+          <h2 id="swiss-book-heading" className="text-3xl font-light md:text-4xl">
+            Switzerland. Weather is fine, wish you were here
+          </h2>
+          <p className="mt-4 max-w-2xl text-base leading-7 text-white/75">
+            Melvyn Wilkins shares stories and photographs from six decades of
+            Swiss travels. Order the printed book directly from Melvyn for
+            £14.95, plus postage if needed.
+          </p>
+          <Link
+            href="/journal/switzerland-weather-is-fine"
+            className="mt-6 inline-block text-base font-semibold text-[#ff6b5f] hover:underline"
+          >
+            View The Book
+          </Link>
         </div>
       </section>
 
