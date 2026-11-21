@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -40,6 +41,21 @@ export default function SwitzerlandBookPage() {
               used to send home. It sets the tone for a personal look at
               Switzerland over the years.
             </p>
+
+            <a
+              href="/books/switzerland-weather-is-fine-cover.jpg"
+              className="mt-8 block overflow-hidden rounded-xl border border-white/15 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ff6b5f]"
+              aria-label="View the full-size front and back book covers"
+            >
+              <Image
+                src="/books/switzerland-weather-is-fine-cover.jpg"
+                alt="Front and back covers of Melvyn Wilkins’s book, with a Swiss postcard, an Alpine terrace and a railway station photo"
+                width={2048}
+                height={1439}
+                sizes="(min-width: 1152px) 640px, (min-width: 1024px) 55vw, calc(100vw - 48px)"
+                className="h-auto w-full"
+              />
+            </a>
           </div>
 
           <section

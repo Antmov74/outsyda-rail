@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
 import FinancialProtection from "@/components/FinancialProtection";
@@ -128,32 +129,42 @@ export default function SwitzerlandJourneyPage() {
       </section>
 
       <section aria-labelledby="swiss-book-heading" className="px-6 pb-24">
-        <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-[#0b0b0b] p-8 md:p-12">
-          <h2 id="swiss-book-heading" className="text-3xl font-light md:text-4xl">
-            Switzerland. Weather is fine, wish you were here
-          </h2>
-          <p className="mt-4 max-w-2xl text-base leading-7 text-white/75">
-            Melvyn Wilkins shares stories and photographs from six decades of
-            Swiss travels. Order the printed book directly from Melvyn for
-            £14.95, plus postage if needed.
-          </p>
-          <div className="mt-6 flex flex-wrap items-center gap-4">
-            <Link
-              href="/journal/switzerland-weather-is-fine"
-              className="text-base font-semibold text-[#ff6b5f] hover:underline"
-            >
-              View The Book
-            </Link>
-            <a
-              href="https://www.ebay.co.uk/itm/900085996544"
-              className="inline-flex rounded-full border border-white/40 px-6 py-3 text-base font-semibold transition hover:border-white hover:bg-white hover:text-black focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ff6b5f]"
-            >
-              Buy On eBay
-            </a>
+        <div className="mx-auto grid max-w-7xl items-center gap-8 rounded-[2rem] border border-white/10 bg-[#0b0b0b] p-8 md:grid-cols-[1.2fr_1fr] md:p-12">
+          <div>
+            <h2 id="swiss-book-heading" className="text-3xl font-light md:text-4xl">
+              Switzerland. Weather is fine, wish you were here
+            </h2>
+            <p className="mt-4 max-w-2xl text-base leading-7 text-white/75">
+              Melvyn Wilkins shares stories and photographs from six decades of
+              Swiss travels. Order the printed book directly from Melvyn for
+              £14.95, plus postage if needed.
+            </p>
+            <div className="mt-6 flex flex-wrap items-center gap-4">
+              <Link
+                href="/journal/switzerland-weather-is-fine"
+                className="text-base font-semibold text-[#ff6b5f] hover:underline"
+              >
+                View The Book
+              </Link>
+              <a
+                href="https://www.ebay.co.uk/itm/900085996544"
+                className="inline-flex rounded-full border border-white/40 px-6 py-3 text-base font-semibold transition hover:border-white hover:bg-white hover:text-black focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ff6b5f]"
+              >
+                Buy On eBay
+              </a>
+            </div>
+            <p className="mt-3 text-base text-white/70">
+              See eBay for its price and delivery details.
+            </p>
           </div>
-          <p className="mt-3 text-base text-white/70">
-            See eBay for its price and delivery details.
-          </p>
+          <Image
+            src="/books/switzerland-weather-is-fine-cover.jpg"
+            alt="Front and back covers of Melvyn Wilkins’s book, with a Swiss postcard, an Alpine terrace and a railway station photo"
+            width={2048}
+            height={1439}
+            sizes="(min-width: 1280px) 505px, (min-width: 768px) 40vw, calc(100vw - 112px)"
+            className="h-auto w-full rounded-xl border border-white/15"
+          />
         </div>
       </section>
 
