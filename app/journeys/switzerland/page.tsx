@@ -134,28 +134,20 @@ export default function SwitzerlandJourneyPage() {
             <h2 id="swiss-book-heading" className="text-3xl font-light md:text-4xl">
               Switzerland. Weather is fine, wish you were here
             </h2>
+            <p className="mt-4 text-base font-semibold">
+              Order direct from Melvyn Wilkins for £14.95
+            </p>
+            <p className="mt-1 text-base text-white/70">Plus postage if needed.</p>
             <p className="mt-4 max-w-2xl text-base leading-7 text-white/75">
-              Melvyn Wilkins shares stories and photographs from six decades of
-              Swiss travels. Order the printed book directly from Melvyn for
-              £14.95, plus postage if needed.
+              Melvyn shares stories and photographs from six decades of Swiss
+              travels.
             </p>
-            <div className="mt-6 flex flex-wrap items-center gap-4">
-              <Link
-                href="/journal/switzerland-weather-is-fine"
-                className="text-base font-semibold text-[#ff6b5f] hover:underline"
-              >
-                View The Book
-              </Link>
-              <a
-                href="https://www.ebay.co.uk/itm/900085996544"
-                className="inline-flex rounded-full border border-white/40 px-6 py-3 text-base font-semibold transition hover:border-white hover:bg-white hover:text-black focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#ff6b5f]"
-              >
-                Buy On eBay
-              </a>
-            </div>
-            <p className="mt-3 text-base text-white/70">
-              See eBay for its price and delivery details.
-            </p>
+            <Link
+              href="/journal/switzerland-weather-is-fine"
+              className="mt-6 inline-block text-base font-semibold text-[#ff6b5f] hover:underline"
+            >
+              View The Book And Order
+            </Link>
           </div>
           <Image
             src="/books/switzerland-weather-is-fine-cover.jpg"

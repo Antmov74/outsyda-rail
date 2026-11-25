@@ -80,7 +80,7 @@ export default function JournalPage() {
               Drybrook author Melvyn Wilkins.
             </p>
             <span className="mt-6 inline-block text-base font-semibold text-[#ff6b5f]">
-              View The Book
+              Order Direct From Melvyn For £14.95
             </span>
           </Link>
         </div>
